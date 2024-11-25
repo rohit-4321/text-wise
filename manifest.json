@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Test Wise",
+    "version": "1.0",
+    "description": "Help user with ---",
+    "permissions": [
+      "activeTab","management", "commands", "tabs"
+    ],
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "commands": {
+        "reload": {
+            "suggested_key": {
+                "default": "Ctrl+Y",
+                "linux": "Ctrl+Y"
+            },
+            "description": "Ctrl+Y"
+        }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://example.com/"],
+        "js": ["src/content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "src/popup.html"
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
+  

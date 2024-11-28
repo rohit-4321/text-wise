@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Help user with ---",
     "permissions": [
-      "activeTab","management", "commands", "tabs"
+      "activeTab","management", "commands", "tabs","scripting", "storage"
     ],
     "background": {
       "service_worker": "src/background.js"
@@ -20,8 +20,9 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://example.com/"],
-        "js": ["src/content.js"]
+        "matches": ["<all_urls>"],
+        "js": ["src/content.js"],
+        "css": ["src/content.css"]
       }
     ],
     "action": {
@@ -30,6 +31,12 @@
     "host_permissions": [
       "http://*/*",
       "https://*/*"
-    ]
+    ],
+    "web_accessible_resources": [
+    {
+      "resources": ["assets/*", "*.js", "*.css", "*.html", "*.map"],
+      "matches": ["<all_urls>"]
+    }
+  ]
   }
   

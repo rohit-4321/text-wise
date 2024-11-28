@@ -1,0 +1,34 @@
+
+.__box__ {
+  height: 50px;
+  width: 250px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top: var(--y, 0); /* Use CSS variables for dynamic values */
+  left: var(--x, 0); /* Use CSS variables for dynamic values */
+  margin: 0;
+  border-radius: 3px;
+  border: 1px solid purple;
+  transform: translateY(-102%);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+
+.flex-item {
+  all: unset;
+  cursor: pointer;
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.flex-item:hover {
+  background-color: rgba(128, 0, 128, 0.13);
+}

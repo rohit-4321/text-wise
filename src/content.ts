@@ -1,2 +1,3 @@
-document.title = "s";
-console.log("Working");
+import { init } from "./func/init";
+
+init();

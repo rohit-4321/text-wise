@@ -16,7 +16,7 @@ export class TextAnalysisPopup {
 		this._box.className = "__box__";
 	}
 	createEl(x: number, y: number) {
-		this._boxsa.style.setProperty("--y", `${y}px`);
+		this._box.style.setProperty("--y", `${y}px`);
 		this._box.style.setProperty("--x", `${x}px`);
 
 		const meaning = chrome.runtime.getURL("assets/meaning.png");
